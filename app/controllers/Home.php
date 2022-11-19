@@ -1,7 +1,10 @@
 <?php
 
-class Home{
+class Home extends Controller{
     public function index(){
-        echo "<h1>Home/Index</h1>";
+        $data['judul'] = 'Homepage';
+        $this->view('templates/header', $data);
+        $this->view('home/index');
+        $this->view('templates/footer');
     }
 }
