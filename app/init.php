@@ -1,6 +1,8 @@
 <?php
 require_once 'core/App.php';
 require_once 'core/Controller.php';
+
+require_once 'config/Config.php';
 /*
 [ENGLISH]
 In init.php we'll call file on app/core.

@@ -1,1 +1,11 @@
-<h1>Blank Page</h1>
+<div class="container mb-5">
+    <h1 class="mt-3 mb-3">Blank Page</h1>
+    <h6>This is Only Blank Page For Latihan About Page and Blank Page From Modul MVC PHP</h6>
+    <hr class="my-4">
+    <div class="text-md-start">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum auctor bibendum. Donec interdum justo finibus, luctus libero a, ornare augue. Vivamus fermentum, nisi luctus vestibulum placerat, tellus neque consectetur odio, ut lacinia lectus urna rhoncus nisl. Aenean dignissim nisl eget nisl placerat feugiat. Suspendisse varius ut erat efficitur facilisis. Cras dictum vel tortor at sagittis. Pellentesque quis dapibus leo. Donec varius nec urna ac sagittis. Duis interdum nunc fringilla, viverra dolor quis, gravida ipsum. Nam mollis rutrum lectus. Vivamus in sagittis tortor, sed imperdiet leo. Proin id cursus lectus, quis dapibus neque. Quisque commodo eleifend mauris non venenatis. Duis dapibus, eros nec lacinia vestibulum, turpis nulla finibus elit, vel molestie lectus magna et nibh. Morbi maximus elementum nisi, vel placerat lacus pharetra non. Sed in velit non tellus malesuada rhoncus. </p>
+    <p>Aliquam dignissim vehicula lorem vitae placerat. Maecenas lacinia eleifend magna id tempor. Donec interdum enim quam, eget ullamcorper risus pulvinar id. Phasellus sit amet aliquam metus. Curabitur enim erat, viverra gravida dui at, iaculis condimentum eros. Nullam porttitor varius ipsum id dapibus. Suspendisse potenti. </p>
+    <p>Etiam a sodales ex. Sed blandit fermentum velit facilisis maximus. Donec tempus commodo nulla quis sagittis. Curabitur laoreet nisl in rhoncus interdum. Pellentesque iaculis urna nec neque rutrum venenatis. Praesent volutpat massa ipsum. Phasellus consectetur congue sem, tempor tempus lectus tempus vitae. Proin aliquam gravida bibendum. Proin odio tellus, tempor a est eget, blandit elementum justo. Duis vulputate posuere purus eget suscipit. Mauris sit amet massa neque. Morbi eget eros vel sem pellentesque fringilla nec eu orci. Suspendisse pellentesque nec dolor quis suscipit. Duis consectetur varius nulla a gravida. In hac habitasse platea dictumst. Mauris tempus, arcu vitae imperdiet tincidunt, enim metus rhoncus sapien, et commodo felis elit vitae neque. </p>
+    </div>
+    <a href="<?= BASEURL; ?>/about" class="btn btn-success" tabindex="-1" role="button">Go Back To About</a>
+</div>
