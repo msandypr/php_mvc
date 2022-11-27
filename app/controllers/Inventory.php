@@ -19,8 +19,13 @@ class Inventory extends Controller{
 
     public function insertData(){
         if($this->model('Inventory_model')->insertDataItem($_POST) > 0){
+            Flasher::setFlash('Successfully', ' Added', 'success');
             header('Location: ' . BASEURL . '/inventory');
             exit;
-        } 
+        } else {
+            Flasher::setFlash('Failed', ' to Add', 'danger');
+            header('Location: ' . BASEURL . '/inventory');
+            exit;
+        }
     }
 }

@@ -32,6 +32,9 @@ class Inventory_model{
         $this->db->execute();
 
         return $this->db->rowCount();
+
+        //return 0; uncomment this for testing failed flash message
+        //and commenting line 23 - 34
     }
     /*private $inv = [
         [
