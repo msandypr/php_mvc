@@ -15,9 +15,10 @@
 
             <ul class="list-group">
             <?php foreach($data['inv'] as $inv) : ?>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
+                <li class="list-group-item">
                     <?= $inv['item_name']; ?>
-                    <a href="<?= BASEURL; ?>/inventory/detail/<?= $inv['id']; ?>" class="badge rounded-pill text-bg-success">Detail</a>
+                    <a href="<?= BASEURL; ?>/inventory/deleteData/<?= $inv['id']; ?>" class="badge rounded-pill text-bg-danger float-end ms-1" onclick="return confirm('Are you sure?');">Delete</a>
+                    <a href="<?= BASEURL; ?>/inventory/detail/<?= $inv['id']; ?>" class="badge rounded-pill text-bg-success float-end ms-1">Detail</a>
                 </li>
                 <?php endforeach; ?>
             </ul>

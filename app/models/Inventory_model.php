@@ -36,6 +36,16 @@ class Inventory_model{
         //return 0; uncomment this for testing failed flash message
         //and commenting line 23 - 34
     }
+
+    public function deleteDataItem($id){
+        $query = "DELETE FROM inventory where id=:id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
     /*private $inv = [
         [
             "item_name" => "Indomie Goreng",

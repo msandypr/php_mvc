@@ -28,4 +28,16 @@ class Inventory extends Controller{
             exit;
         }
     }
+
+    public function deleteData($id){
+        if($this->model('Inventory_model')->deleteDataItem($id) > 0){
+            Flasher::setFlash('Successfully', ' Deleted', 'success');
+            header('Location: ' . BASEURL . '/inventory');
+            exit;
+        } else {
+            Flasher::setFlash('Failed', ' to Delete Data', 'danger');
+            header('Location: ' . BASEURL . '/inventory');
+            exit;
+        }
+    }
 }
