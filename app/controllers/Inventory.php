@@ -40,4 +40,20 @@ class Inventory extends Controller{
             exit;
         }
     }
+
+    public function getEdit(){
+        echo json_encode($this->model('Inventory_model')->getItemById($_POST['id']));
+    }
+
+    public function editData(){
+        if($this->model('Inventory_model')->editDataItem($_POST) > 0){
+            Flasher::setFlash('Successfully', ' Edited', 'success');
+            header('Location: ' . BASEURL . '/inventory');
+            exit;
+        } else {
+            Flasher::setFlash('Failed', ' to Edit', 'danger');
+            header('Location: ' . BASEURL . '/inventory');
+            exit;
+        }
+    }
 }

@@ -9,7 +9,7 @@
         <div class="col-lg-6">
             <h3>Inventory List</h3>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-success mt-2 mb-3" data-bs-toggle="modal" data-bs-target="#formModal">
+            <button type="button" class="btn btn-success mt-2 mb-3 insertDataButton" data-bs-toggle="modal" data-bs-target="#formModal">
                 Insert Data
             </button>
 
@@ -18,6 +18,7 @@
                 <li class="list-group-item">
                     <?= $inv['item_name']; ?>
                     <a href="<?= BASEURL; ?>/inventory/deleteData/<?= $inv['id']; ?>" class="badge rounded-pill text-bg-danger float-end ms-1" onclick="return confirm('Are you sure?');">Delete</a>
+                    <a href="<?= BASEURL; ?>/inventory/editData/<?= $inv['id']; ?>" class="badge rounded-pill text-bg-warning float-end ms-1 modalEdit" data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?= $inv['id']; ?>">Edit</a>
                     <a href="<?= BASEURL; ?>/inventory/detail/<?= $inv['id']; ?>" class="badge rounded-pill text-bg-success float-end ms-1">Detail</a>
                 </li>
                 <?php endforeach; ?>
@@ -36,6 +37,7 @@
       </div>
       <div class="modal-body">
         <form action="<?= BASEURL; ?>/inventory/insertData" method="post">
+        <input type="hidden" id="id" name="id">
         <div class="form-group">
             <label class="mb-2" for="item_name">Item Name</label>
             <input class="form-control" type="text" id="item_name" name="item_name">

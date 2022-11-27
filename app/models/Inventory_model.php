@@ -46,6 +46,25 @@ class Inventory_model{
 
         return $this->db->rowCount();
     }
+
+    public function editDataItem($data){
+        $query = "UPDATE inventory SET
+                    item_name = :item_name,
+                    item_type = :item_type,
+                    quantity = :quantity,
+                    supplier = :supplier
+                  WHERE id=:id";
+        $this->db->query($query);
+        $this->db->bind('id', $data['id']);
+        $this->db->bind('item_name', $data['item_name']);
+        $this->db->bind('item_type', $data['item_type']);
+        $this->db->bind('quantity', $data['quantity']);
+        $this->db->bind('supplier', $data['supplier']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
     /*private $inv = [
         [
             "item_name" => "Indomie Goreng",
