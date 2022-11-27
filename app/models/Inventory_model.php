@@ -1,25 +1,22 @@
 <?php
 
 class Inventory_model{
-
-    private $dbh;
-    private $stmt; //This is database handler
+    private $table = 'inventory';
+    private $db;
 
     public function __construct(){
-        $dsn = 'mysql:host=localhost;dbname=php_mvc';
-
-        try{
-            $this->dbh = new PDO($dsn, 'root', '');
-        } catch(PDOException $e) {
-            die($e->getMessage());
-        }
-
+        $this->db = new Database();
     }
 
     public function getAllItem(){
-        $this->stmt = $this->dbh->prepare('SELECT * FROM inventory');
-        $this->stmt->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        $this->db->query('SELECT * FROM ' . $this->table);
+        return $this->db->resultSet();
+    }
+
+    public function getItemById($id){
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+        $this->db->bind('id', $id);
+        return $this->db->single();
     }
     /*private $inv = [
         [
