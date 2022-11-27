@@ -56,4 +56,12 @@ class Inventory extends Controller{
             exit;
         }
     }
+
+    public function searchData(){
+        $data['judul'] = 'Search Item Data'; 
+        $data['inv'] = $this->model('Inventory_model')->searchItemData();
+        $this->view('templates/header', $data);
+        $this->view('inventory/index', $data);
+        $this->view('templates/footer');
+    }
 }

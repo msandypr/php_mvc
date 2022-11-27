@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-3">
     <div class="row">
         <div class="col-lg-6">
             <?php Flasher::flash(); ?>
@@ -6,13 +6,24 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-6">
-            <h3>Inventory List</h3>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-success mt-2 mb-3 insertDataButton" data-bs-toggle="modal" data-bs-target="#formModal">
-                Insert Data
-            </button>
+      <div class="col-lg-6">
+      <h3>Inventory List</h3>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success mt-2 mb-3 insertDataButton" data-bs-toggle="modal" data-bs-target="#formModal">
+          Insert Data
+        </button>
+        <!-- Search Button -->
+        <form action="<?= BASEURL; ?>/inventory/searchData" method="post">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search Item Data . . ." name="keyword" id="keyword" autocomplete="off">
+            <button class="btn btn-success" type="submit" id="searchButton">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
+    <div class="row">
+        <div class="col-lg-6">
             <ul class="list-group">
             <?php foreach($data['inv'] as $inv) : ?>
                 <li class="list-group-item">

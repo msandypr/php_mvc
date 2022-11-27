@@ -65,6 +65,14 @@ class Inventory_model{
 
         return $this->db->rowCount();
     }
+
+    public function searchItemData(){
+        $keyword = $_POST['keyword'];
+        $query = "SELECT * FROM inventory WHERE item_name LIKE :keyword";
+        $this->db->query($query);
+        $this->db->bind('keyword', "%$keyword%");
+        return $this->db->resultSet();
+    }
     /*private $inv = [
         [
             "item_name" => "Indomie Goreng",
