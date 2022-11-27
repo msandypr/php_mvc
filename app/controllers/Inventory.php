@@ -16,4 +16,11 @@ class Inventory extends Controller{
         $this->view('inventory/detail', $data);
         $this->view('templates/footer');
     }
+
+    public function insertData(){
+        if($this->model('Inventory_model')->insertDataItem($_POST) > 0){
+            header('Location: ' . BASEURL . '/inventory');
+            exit;
+        } 
+    }
 }

@@ -18,6 +18,21 @@ class Inventory_model{
         $this->db->bind('id', $id);
         return $this->db->single();
     }
+
+    public function insertDataItem($data){
+        $query = "INSERT INTO inventory
+                    VALUES
+                    ('', :item_name, :item_type, :quantity, :supplier)";
+        $this->db->query($query);
+        $this->db->bind('item_name', $data['item_name']);
+        $this->db->bind('item_type', $data['item_type']);
+        $this->db->bind('quantity', $data['quantity']);
+        $this->db->bind('supplier', $data['supplier']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
     /*private $inv = [
         [
             "item_name" => "Indomie Goreng",
