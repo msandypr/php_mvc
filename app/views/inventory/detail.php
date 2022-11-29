@@ -1,4 +1,8 @@
-<div class="container mt-5 d-flex justify-content-center">
+<div class="container mb-5">
+    <h1 class="mt-3 mb-3">Item Details</h1>
+    <hr class="my-4">
+</div>
+<div class="container mt-5 mb-5 d-flex justify-content-center">
     <div class="card" style="width: 18rem;">
     <img src="<?= BASEURL; ?>/img/blank_image.jpg" class="card-img-top" alt="<?= $data['inv']['item_name']; ?>">
     <div class="card-body">

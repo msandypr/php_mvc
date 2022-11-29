@@ -5,32 +5,34 @@
         </div>
     </div>
 
+    
+
     <div class="row">
       <div class="col-lg-6">
       <h3>Inventory List</h3>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-success mt-2 mb-3 insertDataButton" data-bs-toggle="modal" data-bs-target="#formModal">
+        <button type="button" class="btn btn-primary mt-2 mb-3 insertDataButton" data-bs-toggle="modal" data-bs-target="#formModal">
           Insert Data
         </button>
         <!-- Search Button -->
         <form action="<?= BASEURL; ?>/inventory/searchData" method="post">
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Search Item Data . . ." name="keyword" id="keyword" autocomplete="off">
-            <button class="btn btn-success" type="submit" id="searchButton">Search</button>
+            <button class="btn btn-primary" type="submit" id="searchButton">Search</button>
           </div>
         </form>
       </div>
     </div>
 
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 mb-5">
             <ul class="list-group">
             <?php foreach($data['inv'] as $inv) : ?>
                 <li class="list-group-item">
                     <?= $inv['item_name']; ?>
-                    <a href="<?= BASEURL; ?>/inventory/deleteData/<?= $inv['id']; ?>" class="badge rounded-pill text-bg-danger float-end ms-1" onclick="return confirm('Are you sure?');">Delete</a>
-                    <a href="<?= BASEURL; ?>/inventory/editData/<?= $inv['id']; ?>" class="badge rounded-pill text-bg-warning float-end ms-1 modalEdit" data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?= $inv['id']; ?>">Edit</a>
-                    <a href="<?= BASEURL; ?>/inventory/detail/<?= $inv['id']; ?>" class="badge rounded-pill text-bg-success float-end ms-1">Detail</a>
+                    <a href="<?= BASEURL; ?>/inventory/deleteData/<?= $inv['id']; ?>" class="btn-sm btn-danger rounded-pill text-bg-danger float-end ms-1" onclick="return confirm('Are you sure?');">Delete</a>
+                    <a href="<?= BASEURL; ?>/inventory/editData/<?= $inv['id']; ?>" class="btn-sm btn-success rounded-pill text-bg-warning float-end ms-1 modalEdit" data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?= $inv['id']; ?>">Edit</a>
+                    <a href="<?= BASEURL; ?>/inventory/detail/<?= $inv['id']; ?>" class="btn-sm btn-primary  rounded-pill text-bg-success float-end ms-1">Detail</a>
                 </li>
                 <?php endforeach; ?>
             </ul>

@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $data['judul']; ?></title>
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
-<body>
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">MSANDYPR</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="<?= BASEURL; ?>">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?= BASEURL; ?>/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?= BASEURL; ?>/inventory">Inventory</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/msandypr/php_mvc/commits/master" target="_blank">Source Code</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>MSANDYPR | PHP MVC</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="shortcut icon" type="image/x-icon" href="<?= BASEURL; ?>/img/favicons/favicon.png">
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==">
+    <link href="<?= BASEURL; ?>/css/theme.css?v=1.1" rel="stylesheet" />
+    <link href="<?= BASEURL; ?>/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-light sticky-top" data-navbar-darken-on-scroll="900">
+        <div class="container pt-2"><a class="navbar-brand" href="<?= BASEURL; ?>"> <img src="<?= BASEURL; ?>/img/logo.png" alt="..." /></a>
+          <div class="navbar-nav ms-auto"><a href="<?= BASEURL; ?>/inventory"><button class="btn btn-secondary">Inventory</button></a></div>
+        </div>
+      </nav>

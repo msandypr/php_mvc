@@ -7,5 +7,5 @@
     <p>Aliquam dignissim vehicula lorem vitae placerat. Maecenas lacinia eleifend magna id tempor. Donec interdum enim quam, eget ullamcorper risus pulvinar id. Phasellus sit amet aliquam metus. Curabitur enim erat, viverra gravida dui at, iaculis condimentum eros. Nullam porttitor varius ipsum id dapibus. Suspendisse potenti. </p>
     <p>Etiam a sodales ex. Sed blandit fermentum velit facilisis maximus. Donec tempus commodo nulla quis sagittis. Curabitur laoreet nisl in rhoncus interdum. Pellentesque iaculis urna nec neque rutrum venenatis. Praesent volutpat massa ipsum. Phasellus consectetur congue sem, tempor tempus lectus tempus vitae. Proin aliquam gravida bibendum. Proin odio tellus, tempor a est eget, blandit elementum justo. Duis vulputate posuere purus eget suscipit. Mauris sit amet massa neque. Morbi eget eros vel sem pellentesque fringilla nec eu orci. Suspendisse pellentesque nec dolor quis suscipit. Duis consectetur varius nulla a gravida. In hac habitasse platea dictumst. Mauris tempus, arcu vitae imperdiet tincidunt, enim metus rhoncus sapien, et commodo felis elit vitae neque. </p>
     </div>
-    <a href="<?= BASEURL; ?>/about" class="btn btn-success" tabindex="-1" role="button">Go Back To About</a>
+    <a href="<?= BASEURL; ?>/about" class="btn btn-primary mb-5" tabindex="-1" role="button">Go Back To About</a>
 </div>
